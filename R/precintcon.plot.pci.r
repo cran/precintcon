@@ -1,21 +1,21 @@
 #' @export
-precintcon.plot.pci <- function(
-      ..., 
-		xlab            = "Years", 
-      ylab            = "PCI", 
-      legend          = NULL,
-      fontsize        = 10, 
-		axis.text.color = "black",  
-		export          = FALSE, 
-      export.name     = "pci_plot.png", 
-		width           = 10, 
-      height          = 10, 
-      units            = "cm"
+precintcon.plot.pci <- function(..., 
+  xlab            = "Years", 
+  ylab            = "PCI", 
+  legend          = NULL,
+  fontsize        = 10, 
+	axis.text.color = "black",  
+	export          = FALSE, 
+  export.name     = "pci_plot.png", 
+	width           = 10, 
+  height          = 10, 
+  units           = "cm",
+  args            = NA
 ) {
 	
 	l <- list(...)
 	
-	varl <- as.list(match.call()[1:length(l)+1])
+	varl <- ifelse(is.na(args), as.character(match.call()[1:length(l)+1]), args)
 	
 	if (length(l) > 1 && !export)
 		par(ask=T)

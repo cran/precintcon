@@ -43,10 +43,9 @@ NULL
 #' pplot.spi(daily)
 #' @keywords standardized precipitation index precipitation
 #' @export 
-pplot.spi <- function(
-   ..., 
+pplot.spi <- function(..., 
 	period          = 3, 
-   distribution    = "Gamma",
+  distribution    = "Gamma",
 	xlab            = "Months",
 	ylab            = "SPI", 
 	ylim            = c(-3,3),
@@ -56,10 +55,22 @@ pplot.spi <- function(
 	export          = FALSE, 
 	export.name     = "spi_plot.png", 
 	width           = 8.6, 
-   height          = 7.5, 
-   units            = "cm"
-) {
-   precintcon.plot.spi(..., period = period, distribution = distribution, xlab = xlab, ylab = ylab,
-         ylim = ylim, legend = legend, fontsize = fontsize, axis.text.color = axis.text.color, 
-         export = export, export.name = export.name, width = width, height = height, units = units)
-}
+  height          = 7.5, 
+  units           = "cm"
+)
+
+precintcon.plot.spi(..., 
+  period          = period, 
+  distribution    = distribution, 
+  xlab            = xlab, 
+  ylab            = ylab,
+  ylim            = ylim, 
+  legend          = legend, 
+  fontsize        = fontsize, 
+  axis.text.color = axis.text.color, 
+  export          = export, 
+  export.name     = export.name, 
+  width           = width, 
+  height          = height, 
+  units           = units,
+  args            = as.character(match.call()[1:length(list(...))+1]))

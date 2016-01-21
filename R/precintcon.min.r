@@ -3,7 +3,7 @@
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com} 
 #' @aliases precintcon.min 
 #' @title Minimun 
-#' @description Calculate the minimun precipitation and its related date into the serie. 
+#' @description Calculates the minimun precipitation and its related date into the serie. 
 #' @usage precintcon.min(object) 
 #' @param object a daily or monthly precipitation serie loaded vie the \code{\link{read.data}} function.
 #' @return An array containing the following values:

@@ -3,7 +3,7 @@
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com} 
 #' @aliases precintcon.monthly.aggregation 
 #' @title Daily to monthly precipitation serie 
-#' @description Transforme a daily precipitation serie into a monthly one. 
+#' @description Transformes a daily precipitation serie into a monthly one. 
 #' @usage precintcon.monthly.aggregation(object) 
 #' @param object a daily precipitation serie.
 #' @return A monthly precipitation serie calculated from a daily one. 

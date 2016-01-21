@@ -3,7 +3,7 @@
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com} 
 #' @aliases precintcon.max 
 #' @title Maximun precipitation 
-#' @description Calculate the max precipitation and its related date into the serie. 
+#' @description Calculates the max precipitation and its related date into the serie. 
 #' @usage precintcon.max(object) 
 #' @param object a daily or monthly precipitation serie.
 #' @return An array containing the following values:

@@ -39,19 +39,27 @@ NULL
 #' @keywords precipitation concentration index
 #' @export
 pplot.pci <- function(
-      ..., 
-		xlab            = "Years", 
-      ylab            = "PCI", 
-      legend          = NULL,
-      fontsize        = 10, 
-		axis.text.color = "black",  
-		export          = FALSE, 
-      export.name     = "pci_plot.png", 
-		width           = 10, 
-      height          = 10, 
-      units            = "cm"
-) {
-   precintcon.plot.pci(..., xlab = xlab, ylab = ylab, legend = legend, fontsize = fontsize, 
-         axis.text.color = axis.text.color, export = export, export.name = export.name, 
-         width = width, height = height, units = units)
-}
+  ..., 
+	xlab            = "Years", 
+  ylab            = "PCI", 
+  legend          = NULL,
+  fontsize        = 10, 
+	axis.text.color = "black",  
+	export          = FALSE, 
+  export.name     = "pci_plot.png", 
+	width           = 10, 
+  height          = 10, 
+  units           = "cm"
+)
+precintcon.plot.pci(..., 
+  xlab            = xlab, 
+  ylab            = ylab, 
+  legend          = legend, 
+  fontsize        = fontsize, 
+  axis.text.color = axis.text.color, 
+  export          = export, 
+  export.name     = export.name, 
+  width           = width, 
+  height          = height, 
+  units           = units,
+  args            = as.character(match.call()[1:length(list(...))+1]))
