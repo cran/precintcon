@@ -12,8 +12,7 @@ precintcon.plot.rai <- function(
   export.name     = "rai_plot.png", 
   width           = 8.6, 
   height          = 7.5, 
-  units           = "cm",
-  args            = NA
+  units            = "cm"
 ) {
   
   l <- list(...)
@@ -25,7 +24,7 @@ precintcon.plot.rai <- function(
     
     l <- lapply(l, FUN = precintcon.rai.analysis, granularity = granularity)
     
-    varl <- ifelse(is.na(args), as.character(match.call()[1:length(l)+1]), args)
+    varl <- as.list(match.call()[1:length(l)+1])
     
     if (!is.null(legend) && length(varl) != length(legend))
       stop(paste("legend should has length equals to the number of input data. legend parameter length", 
@@ -92,18 +91,17 @@ p.plot.rai <- function(d, n, g,
     
     p <- ggplot(data, aes_string(x = "x", y = "y")) + geom_bar(stat = "identity", position = "identity") +  
       xlab(xlab) + ylab(ylab) + 
-      scale_x_date(expand            = c(1/48, 1/48), 
-                   limits            = as.Date(c(data[1, 1], tail(data$x, n = 1))), 
-                   date_breaks       = ifelse(g == "m", "20 months", "years"), 
-                   labels            = date_format(ifelse(g == "m", "%b %y", "%Y")), 
+      scale_x_date(expand = c(1/48, 1/48), 
+                   limits = as.Date(c(data[1, 1], tail(data$x, n = 1))), 
+                   date_breaks = ifelse(g == "m", "20 months", "years"), 
+                   labels = date_format(ifelse(g == "m", "%b %y", "%Y")), 
                    date_minor_breaks = ifelse(g == "m", "1 month", "1 year")) +
       scale_y_continuous(breaks = seq(round(min(data$y), digits = 2) - .5, round(max(data$y), digits = 2) + .5, by = 1), 
                          limits = c(round(min(data$y), digits = 2) - .5, round(max(data$y), digits = 2) + .5)) +
-      theme(text               = element_text(size = fontsize), 
-            axis.text          = element_text(color = axis.text.color),
-            axis.text.x        = element_text(angle = 25),
-            axis.title.x       = element_text(vjust = .1),
-            panel.grid.minor.x = element_blank()) +
+      theme(text = element_text(size = fontsize), 
+            axis.text = element_text(color = axis.text.color),
+            axis.text.x = element_text(angle = 25),
+            axis.title.x = element_text(vjust = .1)) +
       facet_grid(. ~ dataset)
     
     return(p)

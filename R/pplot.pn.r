@@ -43,32 +43,23 @@ NULL
 #' pplot.pn(daily)
 #' @keywords percent of normal precipitation
 #' @export
-pplot.pn <- function(..., 
-  interval        = 30, 
-  scale           = "a",
-	xlab            = NA, 
-  ylab            = "PN", 
-  fontsize        = 10, 
-	axis.text.color = "black", 
-  legend          = NULL, 
-	export          = FALSE, 
-  export.name     = "pn_plot.png", 
-	width           = 10, 
-  height          = 10, 
-  units            = "cm"
-)
-
-precintcon.plot.pn(..., 
-  interval        = interval, 
-  scale           = scale, 
-  xlab            = xlab, 
-  ylab            = ylab, 
-  fontsize        = fontsize, 
-  axis.text.color = axis.text.color, 
-  legend          = legend, 
-  export          = export, 
-  export.name     = export.name, 
-  width           = width, 
-  height          = height, 
-  units           = units,
-  args            = as.character(match.call()[1:length(list(...))+1]))
+pplot.pn <- function(
+      ..., 
+      interval        = 30, 
+      scale           = "a",
+		xlab            = NA, 
+      ylab            = "PN", 
+      fontsize        = 10, 
+		axis.text.color = "black", 
+      legend          = NULL, 
+		export          = FALSE, 
+      export.name     = "pn_plot.png", 
+		width           = 10, 
+      height          = 10, 
+      units            = "cm"
+) {
+   precintcon.plot.pn(..., interval = interval, scale = scale, xlab = xlab, 
+         ylab = ylab, fontsize = fontsize, axis.text.color = axis.text.color, 
+         legend = legend, export = export, export.name = export.name, 
+         width = width, height = height, units = units)
+}

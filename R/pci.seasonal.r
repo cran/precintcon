@@ -1,7 +1,7 @@
 #' @name pci.seasonal
 #' @aliases pci.seasonal
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com}
-#' @description Calculates the Precipitation Concentration Index (PCI) in a seasonal granularity 
+#' @description It calculates the Precipitation Concentration Index (PCI) in a seasonal granularity 
 #' on a daily or monthly precipitation serie.
 #' @title Seasonal Precipitation Concentration Index
 #' @param object is a daily or monthly precipitation serie

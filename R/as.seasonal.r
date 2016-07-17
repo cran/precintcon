@@ -6,7 +6,7 @@ NULL
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com} 
 #' 
 #' @title Converting to seasonal precipitation serie
-#' @description Converts a daily or monthly precipitation serie 
+#' @description It converts a daily or monthly precipitation serie 
 #' to a seasonal serie according to meteorological seasons.
 #' @details If the serie has no a month of a season, it is waived in convertion, e.g., 
 #' if a serie has January and February of 1975, but no December of 1974, the first two months are

@@ -3,7 +3,7 @@ NULL
 
 #' @name pplot.lorenz
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com}
-#' @aliases precintcon.plot.lorenz pplot.lorenz
+#' @aliases precintcon.plot.lorenz pplot.lorenz pplot.ci
 #' @title Plot Lorenz's curve
 #' @description Plots the Lorenz's curve of a precipitation serie.
 #' @usage pplot.lorenz(\dots, interval = 1, grouped = FALSE, 
@@ -47,12 +47,12 @@ NULL
 #'
 #' ##
 #' # Performing the a set of statistical analysis
-#' pplot.lorenz(daily, interval = 1)
+#' pplot.ci(daily, interval = 1)
 #' @keywords lorenz's curve precipitation
 #' @export
 pplot.lorenz <- function(
-  ..., 
-  interval        = 1,
+   ..., 
+   interval        = 1,
 	grouped         = FALSE, 
 	xlab            = expression(sum(n[i]), i==1),
 	ylab            = expression(sum(P[i]), i==1), 
@@ -62,22 +62,12 @@ pplot.lorenz <- function(
 	axis.text.color = "black", 
 	export          = FALSE, 
 	export.name     = "lorenz_plot.png", 
-  width           = 8.6, 
-  height          = 7.5, 
-  units           = "cm"
-)
-precintcon.plot.lorenz(..., 
-  interval        = interval, 
-  grouped         = grouped, 
-  xlab            = xlab, 
-  ylab            = ylab, 
-  legend.title    = legend.title, 
-  legend          = legend, 
-  fontsize        = fontsize, 
-  axis.text.color = axis.text.color, 
-  export          = export, 
-  export.name     = export.name, 
-  width           = width, 
-  height          = height, 
-  units           = units,
-  args            = as.character(match.call()[1:length(list(...))+1]))
+   width           = 8.6, 
+   height          = 7.5, 
+   units            = "cm"
+) {
+   precintcon.plot.lorenz(..., interval = interval, grouped = grouped, 
+         xlab = xlab, ylab = ylab, legend.title = legend.title, legend = legend, 
+         fontsize = fontsize, axis.text.color = axis.text.color, export = export, 
+         export.name = export.name, width = width, height = height, units = units)
+}

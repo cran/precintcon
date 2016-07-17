@@ -3,7 +3,7 @@
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com}
 #' 
 #' @title Coefficient of Variance
-#' @description Calculates the coefficient of variance of a monthly precipitation.
+#' @description It calculates the coefficient of variance of a monthly precipitation.
 #' @details A daily precipitation serie is transformed to a monthly serie.
 #' @usage cv(object)
 #' @param object is a daily or monthly precipitation serie.

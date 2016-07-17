@@ -3,7 +3,7 @@
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com}
 #' @aliases precintcon.ln.a 
 #' @title ln(a)
-#' @description Performes the calculation of ln(a) via the least-squares method. 
+#' @description Performe the calculation of ln(a) via the least-squares method. 
 #' @usage precintcon.ln.a(X, Y) 
 #' @param X is the cumulative percentage of rainy days.
 #' @param Y is the cumulative percentage of rainfall amounts.

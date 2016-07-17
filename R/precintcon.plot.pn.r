@@ -1,23 +1,23 @@
 #' @export
-precintcon.plot.pn <- function(..., 
-  interval        = 30, 
-  scale           = "a",
-	xlab            = NA, 
-  ylab            = "PN", 
-  fontsize        = 10, 
-	axis.text.color = "black", 
-  legend          = NULL, 
-	export          = FALSE, 
-  export.name     = "pn_plot.png", 
-	width           = 10, 
-  height          = 10, 
-  units           = "cm",
-  args            = NA
+precintcon.plot.pn <- function(
+      ..., 
+      interval        = 30, 
+      scale           = "a",
+		xlab            = NA, 
+      ylab            = "PN", 
+      fontsize        = 10, 
+		axis.text.color = "black", 
+      legend          = NULL, 
+		export          = FALSE, 
+      export.name     = "pn_plot.png", 
+		width           = 10, 
+      height          = 10, 
+      units            = "cm"
 ) {
 	
 	l <- list(...)
 	
-	varl <- ifelse(is.na(args), as.character(match.call()[1:length(l)+1]), args)
+	varl <- as.list(match.call()[1:length(l)+1])
 	
 	if (length(l) > 1 && !export)
 		par(ask=T)

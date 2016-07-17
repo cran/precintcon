@@ -3,7 +3,7 @@
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com}
 #' 
 #' @title Amount and Percentage of Precipitation
-#' @description Calculates the amount and percentage of precipitation contributed by a such percent of rainiest days.
+#' @description It calculates the amount and percentage of precipitation contributed by a such percent of rainiest days.
 #' @usage app(..., percent = 25)
 #' @param \dots a set of daily precipitation series.
 #' @param percent is the percentage of the rainiest days to be considered (default = 25).

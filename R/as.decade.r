@@ -6,7 +6,7 @@ NULL
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com}
 #' 
 #' @title Converting a precipitation serie to a decade serie
-#' @description Converts a daily, monthly or annual 
+#' @description It converts a daily, monthly or annual 
 #' precipitation serie to a decade serie.
 #' @details It excludes no complete decades for converting the serie, e.g., a serie starting in 1977 and
 #' finishing in 2008 will have the year 1977 to 1979 and 2000 to 2008 excluded, resulting into a serie of

@@ -45,7 +45,7 @@ NULL
 #' @keywords rainfall anomaly precipitation 
 #' @export
 pplot.rai <- function(
-  ..., 
+   ..., 
 	granularity     = "m",
 	xlab            = "Month",
 	ylab            = "RAI", 
@@ -56,12 +56,11 @@ pplot.rai <- function(
 	export          = FALSE, 
 	export.name     = "rai_plot.png", 
 	width           = 8.6, 
-  height          = 7.5, 
-  units            = "cm"
+   height          = 7.5, 
+   units            = "cm"
 ) {
    precintcon.plot.rai(..., granularity = granularity, xlab = xlab, ylab = ylab, 
          ylim = ylim, legend = legend, fontsize = fontsize, 
          axis.text.color = axis.text.color, export = export, 
-         export.name = export.name, width = width, height = height, units = units,
-         args = as.character(match.call()[1:length(list(...))+1]))
+         export.name = export.name, width = width, height = height, units = units)
 }

@@ -1,6 +1,7 @@
 #' @export
-precintcon.plot.lorenz <- function(..., 
-  interval        = 1,
+precintcon.plot.lorenz <- function(
+   ..., 
+   interval        = 1,
 	grouped         = FALSE, 
 	xlab            = expression(sum(n[i]), i==1),
 	ylab            = expression(sum(P[i]), i==1), 
@@ -10,10 +11,9 @@ precintcon.plot.lorenz <- function(...,
 	axis.text.color = "black", 
 	export          = FALSE, 
 	export.name     = "lorenz_plot.png", 
-  width           = 8.6, 
-  height          = 7.5, 
-  units           = "cm",
-  args            = NA
+   width           = 8.6, 
+   height          = 7.5, 
+   units            = "cm"
 ) {
 	
 	l <- list(...)
@@ -32,7 +32,7 @@ precintcon.plot.lorenz <- function(...,
 		##
 		# Getting parameters name
 		#
-	  varl <- ifelse(is.na(args), as.character(match.call()[1:length(l)+1]), args)
+		varl <- as.list(match.call()[1:length(l)+1])
 		
 		if (!is.null(legend) && length(varl) != length(legend))
 			stop(paste("legend should has length equals to the number of input data. legend parameter length", 

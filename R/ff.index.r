@@ -3,7 +3,7 @@
 #' @author Lucas Venezian Povoa
 #' 
 #' @title F factor
-#' @description Calculates the Approximated Rainfall Erosivity Factor according to the ff index.
+#' @description It calculates the Approximated Rainfall Erosivity Factor according to the ff index.
 #' @usage ff.index(object)
 #' @param object is a daily or monthly precipitation serie
 #' @return the ff index in millimeters

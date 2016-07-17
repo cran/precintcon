@@ -3,7 +3,7 @@
 #' @author Lucas Venezian Povoa
 #' 
 #' @title Temporaly Irregularity Index
-#' @description Calculates the temporaly irregularity index according to the function sum(log(Pi+1/Pi))/(n-1),
+#' @description It calculates the temporaly irregularity index according to the function sum(log(Pi+1/Pi))/(n-1),
 #' where Pi is the precipitation amount of year i, and n is the number of years.
 #' @details Daily or monthly precipitation series are transformed to annual series.
 #' @usage tii(object)

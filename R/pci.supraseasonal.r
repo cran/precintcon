@@ -3,7 +3,7 @@
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com}
 #' 
 #' @title Supraseasonal Precipitation Concentration Index
-#' @description Calculates the supraseasonal precipitation concentration index.
+#' @description It calculates the supraseasonal precipitation concentration index.
 #' @param object is a daily or monthly precipitation serie.
 #' @param hemisthere is the hemisthere, "n" for northern and "s" for south, of the precipitation serie.
 #' @return A data.frame containing the following variables:

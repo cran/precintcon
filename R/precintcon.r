@@ -1,7 +1,7 @@
 #' @title Precipitation Intensity, Concentration and Anomaly Analysis
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com}
 #' @author Jonas Teixeira Nery \email{jonas@@ourinhos.unesp.br}
-#' @description Contains functions to analyze the precipitation 
+#' @description It contains functions to analyze the precipitation 
 #' intensity, concentration and anomaly.
 #' @name precintcon
 #' @docType package
@@ -35,8 +35,7 @@
 #' @importFrom scales percent_format date_format date_breaks
 #' @importFrom graphics par
 #' @importFrom stats aggregate pgamma pnorm quantile sd uniroot var
-#' @importFrom utils read.table tail
-#' @importFrom graphics par
+#' @importFrom utils read.table tail head
 NULL
 
 #' Daily precipitation between 1976 and 2010

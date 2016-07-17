@@ -5,7 +5,7 @@ NULL
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com} 
 #' @aliases precintcon.stat.analysis stat 
 #' @title Basic statistics for precipitation datasets. 
-#' @description Calculates of basic statistics of precipitation datasets. 
+#' @description Perform the calculation of basic statistics of precipitation datasets. 
 #' @usage stat(\dots) 
 #' @param \dots a set of daily or monthly precipitation serie.
 #' @return A data.frame (precintcon.stat) containing the following variables:

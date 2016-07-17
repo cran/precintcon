@@ -67,5 +67,4 @@ pplot.deciles <- function(...,
 	width           = width, 
 	height          = height, 
 	units           = units,
-  grouped         = grouped,
-	args            = as.character(match.call()[1:length(list(...))+1]))
+  grouped         = grouped)

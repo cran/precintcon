@@ -1,6 +1,5 @@
 #' @export 
-precintcon.plot.deciles <- function(
-  ...,
+precintcon.plot.deciles <- function(...,
 	ylab            = "Precipitation",
 	legend.title    = "Legend",
 	legend          = NULL,
@@ -12,8 +11,8 @@ precintcon.plot.deciles <- function(
 	height          = 7.5, 
 	units           = "cm",
 	ylim            = NA,
-	grouped         = FALSE,
-	args            = NA
+	args            = NA,
+	grouped         = FALSE
 ) {
 	
 	l <- list(...)
@@ -21,7 +20,7 @@ precintcon.plot.deciles <- function(
 	if (length(l) > 1 && !export && !grouped)
 		par(ask = T)
 	
-	varl <- ifelse(is.na(args), as.character(match.call()[1:length(l)+1]), args)
+	varl <- as.list(match.call()[1:length(l)+1])
 
 	if (!is.null(legend) && length(varl) != length(legend))
 		stop(paste("legend should has length equals to the number of input data. legend parameter length", 
@@ -38,17 +37,15 @@ precintcon.plot.deciles <- function(
       #
       # Function for plotting
       #
-      f <- function(d, legend, max, min,
+      f <- function(d, max, min,
             ylab, fontsize, axis.text.color, 
             export, export.name, width, height, units) {
          
          d <- as.precintcon.deciles(d)
          
-         d[1] <- legend
-         
          graph <- ggplot(d) + 
                geom_boxplot(aes_string(x = "dataset", ymin = "D1", lower = "D2",
-                           middle = "D5", upper = "D9", ymax = "D10"), stat = "identity", show.legend = FALSE) +
+                           middle = "D5", upper = "D9", ymax = "D10"), stat = "identity", show_guide = FALSE) +
                ylab(ylab) +
                theme(text = element_text(size = fontsize), 
                      axis.text = element_text(color = axis.text.color),
@@ -70,7 +67,7 @@ precintcon.plot.deciles <- function(
 		#
 		# Generating graphs for each input data
 		#	
-		mapply(f, l, varl, max = max, min = min, fontsize = fontsize, axis.text.color = axis.text.color, 
+		mapply(f, l, max = max, min = min, fontsize = fontsize, axis.text.color = axis.text.color, 
 		   export = export, export.name = export.name, width = width, height = height, units = units,
 		   MoreArgs = list(ylab = ylab), SIMPLIFY = FALSE)
 	}

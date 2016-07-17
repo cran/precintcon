@@ -3,7 +3,7 @@
 #' @author Lucas Venezian Povoa \email{lucasvenez@@gmail.com} 
 #' 
 #' @title Mann-Kendall Trend Test
-#' @description Calculates a trend test using the rank-based nonparametric Mann-Kendall method.
+#' @description It calculates a trend test using the rank-based nonparametric Mann-Kendall method.
 #' @usage trend.test(object, significance.level = 0.05)
 #' @param object is a daily or monthly precipitation serie.
 #' @param significance.level is the significance level to be considered in the analysis. 
